@@ -14,6 +14,7 @@
 		E19692FE22001E9B0000FF75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19692FC22001E9B0000FF75 /* LaunchScreen.storyboard */; };
 		E196930922001E9C0000FF75 /* Lingo_ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E196930822001E9C0000FF75 /* Lingo_ChatTests.swift */; };
 		E196931422001E9C0000FF75 /* Lingo_ChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E196931322001E9C0000FF75 /* Lingo_ChatUITests.swift */; };
+		E19693232200237D0000FF75 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19693222200237D0000FF75 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E196930F22001E9C0000FF75 /* Lingo ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lingo ChatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E196931322001E9C0000FF75 /* Lingo_ChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lingo_ChatUITests.swift; sourceTree = "<group>"; };
 		E196931522001E9C0000FF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19693222200237D0000FF75 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		E19692F222001E990000FF75 /* Lingo Chat */ = {
 			isa = PBXGroup;
 			children = (
+				E1969321220023170000FF75 /* Controller */,
 				E19692F322001E990000FF75 /* AppDelegate.swift */,
-				E19692F522001E990000FF75 /* ViewController.swift */,
 				E19692F722001E990000FF75 /* Main.storyboard */,
 				E19692FA22001E9B0000FF75 /* Assets.xcassets */,
 				E19692FC22001E9B0000FF75 /* LaunchScreen.storyboard */,
@@ -123,6 +125,15 @@
 				E196931522001E9C0000FF75 /* Info.plist */,
 			);
 			path = "Lingo ChatUITests";
+			sourceTree = "<group>";
+		};
+		E1969321220023170000FF75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E19693222200237D0000FF75 /* LoginController.swift */,
+				E19692F522001E990000FF75 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19692F622001E990000FF75 /* ViewController.swift in Sources */,
+				E19693232200237D0000FF75 /* LoginController.swift in Sources */,
 				E19692F422001E990000FF75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
