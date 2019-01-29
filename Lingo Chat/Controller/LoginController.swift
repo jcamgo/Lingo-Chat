@@ -19,12 +19,14 @@ class LoginController: UIViewController {
         return view
     }()
     
-    // Creating Button
+    // Creating Button UI
      let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
         button.setTitle("Register", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         return button
     }()
 
@@ -51,7 +53,10 @@ class LoginController: UIViewController {
     
     func setupLoginRegisterButton() {
         // need x, y, width, height constraints
-        
+        loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive = true
+        loginRegisterButton.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
