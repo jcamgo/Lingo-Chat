@@ -18,6 +18,7 @@ class LoginController: UIViewController {
         view.layer.masksToBounds = true
         return view
     }()
+    
     // Creating Button UI
      let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
@@ -61,7 +62,6 @@ class LoginController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
 }
 
 extension UIColor {
