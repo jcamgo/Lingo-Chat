@@ -29,6 +29,13 @@ class LoginController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         return button
     }()
+    
+    let nameTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Name"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +56,18 @@ class LoginController: UIViewController {
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
         inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        inputsContainerView.addSubview(nameTextField)
+        
+        // need x, y, width, height constraints
+        
+            nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
+        
+            nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive = true
+        
+            nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        
+            nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive = true 
     }
     
     func setupLoginRegisterButton() {
