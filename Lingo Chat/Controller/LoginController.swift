@@ -68,7 +68,9 @@ class LoginController: UIViewController {
     
     let ProfileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "??")
+        imageView.image = UIImage(named: "profile_pic")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
 
@@ -80,9 +82,19 @@ class LoginController: UIViewController {
         // Adding it to the view
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
+        view.addSubview(ProfileImageView)
         
         setupInputsContainerView()
         setupLoginRegisterButton()
+        setupProfileImageView()
+    }
+    
+    func setupProfileImageView() {
+        // need x, y, width, height constraints
+        ProfileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        ProfileImageView.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
+        ProfileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        ProfileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     func setupInputsContainerView() {
