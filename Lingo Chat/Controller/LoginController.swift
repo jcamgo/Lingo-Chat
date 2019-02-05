@@ -5,7 +5,6 @@
 //  Created by Jonathan Orellana on 1/28/19.
 //  Copyright © 2019 jonathan orellana. All rights reserved.
 //
-
 import UIKit
 
 class LoginController: UIViewController {
@@ -98,6 +97,7 @@ class LoginController: UIViewController {
     }
     
     func setupInputsContainerView() {
+        
         // need x, y, width, height constraints
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -142,6 +142,7 @@ class LoginController: UIViewController {
     }
     
     func setupLoginRegisterButton() {
+        
         // need x, y, width, height constraints
         loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive = true
@@ -155,7 +156,6 @@ class LoginController: UIViewController {
 }
 
 extension UIColor {
-    
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
