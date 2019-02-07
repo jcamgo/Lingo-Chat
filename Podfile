@@ -10,6 +10,7 @@ target 'Lingo Chat' do
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Firebase/Core'
 
   target 'Lingo ChatTests' do
     inherit! :search_paths
