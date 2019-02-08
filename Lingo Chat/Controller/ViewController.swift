@@ -20,6 +20,5 @@ class ViewController: UITableViewController {
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
     }
-
 }
 
