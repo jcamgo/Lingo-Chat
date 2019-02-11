@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -33,7 +34,20 @@ class LoginController: UIViewController {
     }()
     
     @objc func handleRegister() {
-        print(123)
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Form is not valid")
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            
+            //successfully authenticated user
+        }
     }
     
     let nameTextField: UITextField = {
