@@ -45,7 +45,6 @@ class LoginController: UIViewController {
                 print(error as Any)
                 return
             }
-            
             //successfully authenticated user
         }
     }
