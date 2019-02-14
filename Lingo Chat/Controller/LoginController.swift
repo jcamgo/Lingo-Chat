@@ -34,7 +34,7 @@ class LoginController: UIViewController {
     }()
     
     @objc func handleRegister() {
-        guard let email = emailTextField.text, let password = passwordTextField.text else {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
             print("Form is not valid")
             return
         }
@@ -46,6 +46,17 @@ class LoginController: UIViewController {
                 return
             }
             //successfully authenticated user
+            let ref = Database.database().reference(fromURL: "https://lingo-chat-ec628.firebaseio.com/")
+            let values = ["name": name, "email": email]
+            ref.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                
+                if err != nil {
+                    print(err as Any)
+                    return
+                }
+                
+                print("Saved user successfully into Firebase db")
+            })
         }
     }
     
