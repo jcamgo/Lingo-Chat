@@ -39,25 +39,32 @@ class LoginController: UIViewController {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (res, error) in
             
-            if error != nil {
-                print(error as Any)
+            if let error = error {
+                print(error)
                 return
             }
+            
+            guard let uid = res?.user.uid else {
+                return
+            }
+            
             //successfully authenticated user
-            let ref = Database.database().reference(fromURL: "https://lingo-chat-ec628.firebaseio.com/")
+            let ref = Database.database().reference()
+            let usersReference = ref.child("users").child(uid)
             let values = ["name": name, "email": email]
-            ref.updateChildValues(values, withCompletionBlock: { (err, ref) in
+            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
                 
-                if err != nil {
-                    print(err as Any)
+                if let err = err {
+                    print(err)
                     return
                 }
                 
                 print("Saved user successfully into Firebase db")
+                
             })
-        }
+        })
     }
     
     let nameTextField: UITextField = {
