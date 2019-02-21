@@ -110,6 +110,7 @@ class LoginController: UIViewController {
         return imageView
     }()
 
+    // Updating the view
     override func viewDidLoad() {
         super.viewDidLoad()
 
