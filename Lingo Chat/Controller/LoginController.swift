@@ -39,6 +39,7 @@ class LoginController: UIViewController {
             return
         }
         
+        // Authenticating user with email
         Auth.auth().createUser(withEmail: email, password: password, completion: { (res, error) in
             
             if let error = error {
