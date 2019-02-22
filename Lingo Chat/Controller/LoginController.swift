@@ -134,6 +134,7 @@ class LoginController: UIViewController {
         ProfileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
+    // Setting up constraints programatically
     func setupInputsContainerView() {
         
         // need x, y, width, height constraints
