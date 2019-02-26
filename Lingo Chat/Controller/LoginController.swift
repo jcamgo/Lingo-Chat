@@ -74,6 +74,7 @@ class LoginController: UIViewController {
         return tf
     }()
     
+    // Name Separator
     let nameSeparatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
