@@ -82,6 +82,7 @@ class LoginController: UIViewController {
         return view
     }()
     
+    // Email Textfield
     let emailTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email"
