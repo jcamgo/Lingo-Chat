@@ -90,6 +90,7 @@ class LoginController: UIViewController {
         return tf
     }()
     
+    // Email Separator
     let emailSeparatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
