@@ -107,6 +107,7 @@ class LoginController: UIViewController {
         return tf
     }()
     
+    // Profile Image
     let ProfileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "profile_pic")
