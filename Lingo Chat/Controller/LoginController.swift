@@ -115,6 +115,11 @@ class LoginController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
+    
+    let loginRegisterSegmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Login", "Register"])
+        return sc
+    }()
 
     // Updating the view
     override func viewDidLoad() {
