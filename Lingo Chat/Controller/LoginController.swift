@@ -116,13 +116,18 @@ class LoginController: UIViewController {
         return imageView
     }()
     
-    let loginRegisterSegmentedControl: UISegmentedControl = {
+    lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
         sc.translatesAutoresizingMaskIntoConstraints = false
         sc.tintColor = UIColor.white
         sc.selectedSegmentIndex = 1
+        sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
         return sc
     }()
+    
+    @objc func handleLoginRegisterChange() {
+        
+    }
 
     // Updating the view
     override func viewDidLoad() {
