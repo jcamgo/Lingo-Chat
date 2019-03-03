@@ -126,7 +126,7 @@ class LoginController: UIViewController {
     }()
     
     @objc func handleLoginRegisterChange() {
-        
+        print(loginRegisterSegmentedControl.selectedSegmentIndex)
     }
 
     // Updating the view
