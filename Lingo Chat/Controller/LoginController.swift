@@ -116,6 +116,7 @@ class LoginController: UIViewController {
         return imageView
     }()
     
+    // Login & Register
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
         sc.translatesAutoresizingMaskIntoConstraints = false
