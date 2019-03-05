@@ -211,6 +211,7 @@ class LoginController: UIViewController {
         passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive = true
     }
     
+    // Login Register button
     func setupLoginRegisterButton() {
         
         // need x, y, width, height constraints
