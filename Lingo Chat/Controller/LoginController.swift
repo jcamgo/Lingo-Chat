@@ -127,7 +127,9 @@ class LoginController: UIViewController {
     }()
     
     @objc func handleLoginRegisterChange() {
-        print(loginRegisterSegmentedControl.selectedSegmentIndex)
+        let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
+        loginRegisterButton.setTitle(title, for: .normal)
+        print()
     }
 
     // Updating the view
