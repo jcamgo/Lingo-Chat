@@ -130,7 +130,9 @@ class LoginController: UIViewController {
     @objc func handleLoginRegisterChange() {
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
         loginRegisterButton.setTitle(title, for: .normal)
-        print()
+        
+        // Change height of input container view
+        inputsContainerViewHeightAnchor?.constant = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 100 : 150
     }
 
     // Updating the view
@@ -168,6 +170,8 @@ class LoginController: UIViewController {
         ProfileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
+    var inputsContainerViewHeightAnchor: NSLayoutConstraint?
+    
     // Setting up constraints programatically
     func setupInputsContainerView() {
         
@@ -175,7 +179,8 @@ class LoginController: UIViewController {
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
-        inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        inputsContainerViewHeightAnchor = inputsContainerView.heightAnchor.constraint(equalToConstant: 150)
+        inputsContainerViewHeightAnchor?.isActive = true
         
         inputsContainerView.addSubview(nameTextField)
         inputsContainerView.addSubview(nameSeparatorView)
