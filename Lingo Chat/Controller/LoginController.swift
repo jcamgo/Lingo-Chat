@@ -126,6 +126,7 @@ class LoginController: UIViewController {
         return sc
     }()
     
+    // Changing the Login button to say Register and vice versa
     @objc func handleLoginRegisterChange() {
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
         loginRegisterButton.setTitle(title, for: .normal)
