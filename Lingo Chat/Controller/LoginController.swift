@@ -47,7 +47,7 @@ class LoginController: UIViewController {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, link: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             
             if let error = error {
                 print(error)
@@ -56,7 +56,7 @@ class LoginController: UIViewController {
             
             // Successfully logged in our user
             self.dismiss(animated: true, completion: nil)
-        }
+        })
     }
     
     @objc func handleRegister() {
