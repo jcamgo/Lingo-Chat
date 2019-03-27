@@ -198,6 +198,7 @@ class LoginController: UIViewController {
         setupLoginRegisterSegmentedControl()
     }
     
+    // Setup login
     func setupLoginRegisterSegmentedControl() {
         // need x, y, width, height constraints
         loginRegisterSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
