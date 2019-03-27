@@ -208,6 +208,7 @@ class LoginController: UIViewController {
         
     }
     
+    // Profile Image Setup
     func setupProfileImageView() {
         // need x, y, width, height constraints
         ProfileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
